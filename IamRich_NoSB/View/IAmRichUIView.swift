@@ -12,6 +12,13 @@ class IAmRichUIView: UIView {
     enum IAmRichUIViewConstraints {
         enum LbIAmRich {
             static let fontSize: CGFloat = 40
+            static let top: CGFloat = 112
+            static let height: CGFloat = 47
+        }
+        enum imgDiamond {
+            static let top: CGFloat = 109
+            static let height: CGFloat = 251
+            static let width: CGFloat = 270
         }
     }
     
@@ -67,14 +74,14 @@ class IAmRichUIView: UIView {
             mainContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
             mainContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            lbIAmRich.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 112),
+            lbIAmRich.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: IAmRichUIViewConstraints.LbIAmRich.top)),
             lbIAmRich.centerXAnchor.constraint(equalTo: centerXAnchor),
-            lbIAmRich.heightAnchor.constraint(equalToConstant: 47),
+            lbIAmRich.heightAnchor.constraint(equalToConstant: IAmRichUIViewConstraints.LbIAmRich.height),
             
-            imgDiamond.topAnchor.constraint(equalTo: lbIAmRich.bottomAnchor, constant: 109),
+            imgDiamond.topAnchor.constraint(equalTo: lbIAmRich.bottomAnchor, constant: IAmRichUIViewConstraints.imgDiamond.top),
             imgDiamond.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imgDiamond.heightAnchor.constraint(equalToConstant: 251),
-            imgDiamond.widthAnchor.constraint(equalToConstant: 270),
+            imgDiamond.heightAnchor.constraint(equalToConstant: IAmRichUIViewConstraints.imgDiamond.height),
+            imgDiamond.widthAnchor.constraint(equalToConstant: IAmRichUIViewConstraints.imgDiamond.width),
         ])
     }
 }

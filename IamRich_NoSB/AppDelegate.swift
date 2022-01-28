@@ -11,7 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-        var meLiCoordinator: IAmRichCoordinator?
+        var iAmRichCoordinator: IAmRichCoordinator?
         let navController = UINavigationController()
 
 
@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         func initializeWindow() {
-            meLiCoordinator = IAmRichCoordinator(navigationController: navController)
-            meLiCoordinator?.start()
+            iAmRichCoordinator = IAmRichCoordinator(navigationController: navController)
+            iAmRichCoordinator?.start()
             
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.rootViewController = navController
